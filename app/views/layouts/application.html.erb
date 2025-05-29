@@ -21,16 +21,25 @@
       </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
+          <li>
+            <a class="nav-link text-light" href="/bookers2">
+            <i class="fa-solid fa-home"></i> Home</a>
+          </li>
       <% if user_signed_in? %>
         <li>
-          <%= link_to "log out", destroy_user_session_path, method: :delete %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
         </li>
       <% else %>
         <li>
-          <%= link_to "sign up", new_user_registration_path %>
+          <a class="nav-link text-light" href="/bookers2/home/about">
+             <i class="fa-solid fa-link"></i> About</a>
         </li>
         <li>
-          <%= link_to "log in", new_user_session_path %>
+          <%= link_to "Sign up", new_user_registration_path %>
+        </li>
+        <li>
+          <%= link_to "Log in", new_user_session_path %>
+           <i class="fa-solid fa-sign_in-alt"></i>
         </li>
       <% end %>
     </header>
